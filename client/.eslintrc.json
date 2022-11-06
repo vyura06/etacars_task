@@ -7,10 +7,9 @@
         "plugin:@typescript-eslint/recommended",
         "plugin:react-hooks/recommended",
         "plugin:react/recommended",
-        "plugin:import/errors",
-        "plugin:import/warnings",
-        "plugin:import/typescript",
+        "plugin:import/recommended",
         "plugin:prettier/recommended",
+        "prettier",
         "standard-with-typescript"
     ],
     "overrides": [
@@ -27,11 +26,19 @@
     "plugins": [
         "react",
         "@typescript-eslint",
-        "prettier"
+        "react-hooks"
     ],
     "rules": {
-        "require-jsdoc": "off",
-        "@typescript-eslint/ban-ts-comment":"off",
-        "@typescript-eslint/ban-types":"off"
-    }
+        "max-len": ["warn", { "code": 120 }],
+        "no-shadow": "off",
+        "@typescript-eslint/no-shadow": ["error"],
+        "no-use-before-define": "off",
+        "@typescript-eslint/no-use-before-define": ["error"],
+        "react/jsx-filename-extension": [ "warn", {"extensions": [".tsx"]} ],
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn",
+        "import/prefer-default-export": "off",
+        "react/prop-types": "off",
+        "react/display-name": "off"
+    },
 }
