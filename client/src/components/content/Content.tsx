@@ -6,7 +6,7 @@ import { Info } from '../info/Info';
 
 export const Content = (): JSX.Element => {
   return (
-    <section className="stack stack_vertical content">
+    <section className='main main_vertical content'>
       <Routes>
         <Route path={route.main} element={<Table />} />
         <Route path={route.about} element={<Info />} />
