@@ -1,5 +1,9 @@
-import React from 'react';
+import React from "react";
 
-export const Loader = (): JSX.Element => {
-  return <div>table</div>;
+export const Loader = () => {
+  return (
+    <div className="box">
+      <span className="loader"></span>
+    </div>
+  );
 };
