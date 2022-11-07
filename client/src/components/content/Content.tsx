@@ -14,3 +14,5 @@ export const Content = (): JSX.Element => {
     </section>
   );
 };
+
+export default Content;
