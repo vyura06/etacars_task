@@ -1,0 +1,43 @@
+.modal {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba($color-black, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  .modal__content {
+    padding: 2rem;
+    border-radius: 1.2rem;
+    background-color: $color-white;
+    width: 350px;
+    text-align: center;
+  }
+  
+  .modal__input-field {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+  }
+  
+  .modal__input {
+    padding: 0.5rem 2rem;
+    border: 2px solid $color-black;
+    border-radius: 1.5rem;
+  
+    &:focus {
+      outline: $color-black;
+    }
+  }
+  
+  
+  .modal__warning-message {
+    color: $primary-color;
+    font-size: 1rem;
+  }
+  
