@@ -1,0 +1,23 @@
+.pagination {
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+  }
+  
+  
+  .page-link {
+    display: inline-block;
+    padding: 0.5rem;
+    background-color: $background-dark;
+    color: $color-black;
+    text-decoration: none;
+    border-radius: 0.5rem
+  }
+  
+  //448px
+  @media (max-width: 28em) {
+    .page-link {
+      padding: 0.3rem;
+      font-size: 14px;
+    }
+  }

@@ -3,6 +3,7 @@ import { CurrencyItem } from "../item/Item";
 import Modal from "../modal/Modal";
 import { useAppSelector, useWindowWidth } from "../../hooks/hooks";
 import { Loader } from "../loader/Loader";
+import { Pagination } from "../../components/pagination/Pagination";
 import { Currency } from "../../interfaces/Currency";
 import { float } from "../../float/float";
 
@@ -71,6 +72,11 @@ export const Table = () => {
               ))}
             </tbody>
           </table>
+          <Pagination
+            paginate={paginate}
+            currenciesPerPage={currenciesPerPage}
+            totalCurrency={currencies.length}
+          />
         </div>
       ) : null}
       {modalActive && (
