@@ -22,3 +22,30 @@
     width: 100%;
   }
   
+//880px
+@media (max-width: 55em) {
+  .container {
+    width: 90%;
+  }
+}
+
+//752px
+@media (max-width: 47em) {
+  .container {
+    width: 92%;
+  }
+}
+
+//544px
+@media (max-width: 34em) {
+  .container {
+    width: 93%;
+  }
+}
+
+//400px
+@media (max-width: 25em) {
+  .container {
+    width: 97%;
+  }
+}
