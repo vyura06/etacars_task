@@ -6,6 +6,8 @@ import { Loader } from "../loader/Loader";
 import Modal from "../modal/Modal";
 import { float } from "../../float/float";
 import { Currency } from "../../interfaces/Currency";
+import { LineChart } from "../lineChart/lineChart";
+
 
 export const Info = () => {
   const navigate = useNavigate();
@@ -33,7 +35,6 @@ export const Info = () => {
   const onClickPlusButton = (e: React.MouseEvent) => {
     e.stopPropagation();
     setSelectedCurrency(selectedCurrency);
-
     setModalActive(true);
   };
 
@@ -44,15 +45,14 @@ export const Info = () => {
       {status === "success" && history.length ? (
         <div className="currency-details column">
           <div className="row">
-            <div className="add-button" onClick={onClickPlusButton}>
+            <div style={{backgroundColor: "#8D9EFF", color:"white"}} className="add-button" onClick={onClickPlusButton}>
               +
             </div>
             <div
               className="back-button"
               onClick={onNavigateToCurrencyTable}
-            >{`<-`}</div>
+            >{`Back`}</div>
           </div>
-
           <div className="currency-details__info">
             <div className="currency-details__info-element">
               Name: {currency?.name}
@@ -70,6 +70,7 @@ export const Info = () => {
                 ? `${float(currency.changePercent24Hr)}%`
                 : "None"}
             </div>
+            <LineChart history={history} />
           </div>
         </div>
       ) : null}
