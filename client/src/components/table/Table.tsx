@@ -37,28 +37,29 @@ export const Table = () => {
       {status === "success" && currencies.length ? (
         <div className="container column">
           <table className="table">
-            <thead>
+            <thead style={{backgroundColor: "#6C4AB6"}}>
               <tr className="table__row">
-                <th className="table__item">#</th>
-                <th className="table__item">Coin</th>
-                <th className="table__item">Price</th>
+                <th style={{color: "white"}} className="table__item">#</th>
+                <th style={{color: "white"}} className="table__item">Coin</th>
+                <th style={{color: "white"}} className="table__item">Price</th>
                 {width > 780 ? (
-                  <th className="table__item">Market cap</th>
+                  <th style={{color: "white"}} className="table__item">Market cap</th>
                 ) : null}
 
                 {width > 660 ? (
-                  <th className="table__item">VWAP (24Hr)</th>
+                  <th style={{color: "white"}} className="table__item">VWAP (24Hr)</th>
                 ) : null}
-                {width > 560 ? <th className="table__item">Supply</th> : null}
+                {width > 560 ? <th style={{color: "white"}}className="table__item">Supply</th> : null}
 
                 {width > 890 ? (
-                  <th className="table__item">Volume (24Hr)</th>
+                  <th style={{color: "white"}} className="table__item">Volume (24Hr)</th>
                 ) : (
                   ""
                 )}
                 {width > 400 ? (
-                  <th className="table__item">Change (24Hr)</th>
+                  <th style={{color: "white"}} className="table__item">Change (24Hr)</th>
                 ) : null}
+                <th className="table__item"></th>
               </tr>
             </thead>
             <tbody>
