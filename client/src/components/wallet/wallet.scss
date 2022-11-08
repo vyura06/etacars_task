@@ -1,0 +1,15 @@
+  .wallet-list {
+    padding: 0;
+  }
+
+  .wallet-list__item {
+    display: flex;
+    float: left;
+    flex-direction: row;
+    gap: 1rem;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+
+  
