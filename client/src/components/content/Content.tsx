@@ -14,7 +14,7 @@ export const Content = (): JSX.Element => {
   }, [dispatch]);
 
   return (
-    <section className='main main_vertical content'>
+    <section className='content'>
       <Routes>
           <Route path="/" element={<Table />} />
           <Route path="currency/:id" element={<Info />} />
