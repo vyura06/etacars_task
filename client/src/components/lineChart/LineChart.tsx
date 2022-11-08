@@ -42,7 +42,7 @@ export const LineChart = ({ history }: LineChartProps) => {
         label: "Price usd",
         data: history.map((e) => e.priceUsd),
         fill: true,
-        pointBorderColor: "#8884d8",
+        pointBorderColor: "black",
         pointBorderWidth: 2,
         pointRadius: 1,
         tension: 1,
