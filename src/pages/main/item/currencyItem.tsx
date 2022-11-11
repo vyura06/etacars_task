@@ -1,8 +1,8 @@
 import React from "react";
-import { float } from "../../float/float";
+import { float } from "../../../utils/float/float";
 import { useNavigate } from "react-router-dom";
-import { Currency } from "../../interfaces/Currency";
-import { useWindowWidth } from "../../hooks/hooks";
+import { Currency } from "../../../interfaces/Currency";
+import { useWindowWidth } from "../../../hooks/hooks";
 
 interface CurrencyItemProps {
   id: string;
@@ -81,9 +81,11 @@ export const CurrencyItem = ({
       ) : null}
 
       <td className="table__item">
-        <div className="add-button" onClick={onClickPlusButton}>
-          +
-        </div>
+        <button
+          className="button button__add" 
+          type="submit"
+          onClick={onClickPlusButton}
+        >+</button>
       </td>
     </tr>
   );

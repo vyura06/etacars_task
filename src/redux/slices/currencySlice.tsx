@@ -3,6 +3,7 @@ import {createSlice, PayloadAction, createAsyncThunk} from "@reduxjs/toolkit";
 import {Currency} from "../../interfaces/Currency";
 import { History } from "../../interfaces/History";
 
+
 const api = "https://api.coincap.io/v2/assets";
 
 interface InitialState {

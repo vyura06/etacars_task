@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { Table } from '../table/Table';
-import { Info } from '../info/Info';
+import { Table } from '../../pages/main/table/currencyTable';
+import { Info } from '../../pages/info/currencyInfo';
 
 import { useEffect } from "react";
 import { getCurrencies } from "../../redux/slices/currencySlice";

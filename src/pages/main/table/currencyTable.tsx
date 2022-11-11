@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import { CurrencyItem } from "../item/Item";
-import Modal from "../modal/Modal";
-import { useAppSelector, useWindowWidth } from "../../hooks/hooks";
-import { Loader } from "../loader/Loader";
-import { Pagination } from "../../components/pagination/Pagination";
-import { Currency } from "../../interfaces/Currency";
-import { float } from "../../float/float";
+import { CurrencyItem } from "../item/currencyItem";
+import Modal from "../../../components/modal/currencyModal/currencyModal";
+import { useAppSelector, useWindowWidth } from "../../../hooks/hooks";
+import { Loader } from "../../../components/loader/Loader";
+import { Pagination } from "../../../components/pagination/Pagination";
+import { Currency } from "../../../interfaces/Currency";
 
 export const Table = () => {
   const { currencies, status } = useAppSelector(

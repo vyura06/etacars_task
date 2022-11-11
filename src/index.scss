@@ -1,6 +1,4 @@
-@import './style/button/add-button.scss';
-@import './style/button/back-button.scss';
-@import './style/button/delete-button.scss';
+@import './style/button/button.scss';
 
 @import './style/color.scss';
 @import './style/const.scss';
@@ -12,12 +10,15 @@
 @import './components//content/content.scss';
 @import './components/footer/footer.scss';
 
-@import './components/info/info.scss';
-@import './components/table/table.scss';
 @import './components/pagination/pagination.scss';
 
 @import './components/loader/loader.scss';
-@import './components/modal/modal.scss';
+
+@import './components/modal/currencyModal/currencyModal.scss';
+@import './components/modal/walletModal/walletModal.scss';
+
+@import './pages/info/currencyInfo.scss';
+@import './pages/main/table/currencyTable.scss';
 
 
 body {

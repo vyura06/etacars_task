@@ -1,0 +1,14 @@
+.currency-details {
+  width: 50%;
+  padding: 1rem;
+  &__info-element{
+    color: $color-white;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem;
+  }
+}
+
+.lineChart{
+  cursor: pointer;
+}

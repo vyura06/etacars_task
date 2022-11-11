@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { float } from "../../float/float";
+import { float } from "../../utils/float/float";
 import { useAppSelector } from "../../hooks/hooks";
-import { calcCurrentWallet, calcInitialWallet } from "../../calculation/calc";
-import { WalletModal } from "../wallet/walletModal";
+import { calcCurrentWallet, calcInitialWallet } from "../../utils/calculation/calc";
+import { WalletModal } from "../modal/walletModal/walletModal";
 
 export const Header = () => {
   const [modalActive, setModalActive] = useState<boolean>(false);

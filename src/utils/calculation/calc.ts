@@ -1,5 +1,5 @@
-import { Wallet } from "../interfaces/Wallet";
-import { Currency } from "../interfaces/Currency";
+import { Wallet } from "../../interfaces/Wallet";
+import { Currency } from "../../interfaces/Currency";
 
 export const calcInitialWallet = (wallet: Wallet[]) => {
   const initialWallet = wallet.reduce((ac, e) => ac + e.count * e.price, 0);

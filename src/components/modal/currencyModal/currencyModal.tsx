@@ -1,7 +1,7 @@
 import React, { ChangeEvent, useState } from "react";
-import { Currency } from "../../interfaces/Currency";
-import { useAppDispatch } from "../../hooks/hooks";
-import { addCurrencyToWallet } from "../../redux/slices/walletSlice";
+import { Currency } from "../../../interfaces/Currency";
+import { useAppDispatch } from "../../../hooks/hooks";
+import { addCurrencyToWallet } from "../../../redux/slices/walletSlice";
 
 interface ModalProps {
   setActive: (option: boolean) => void;
@@ -40,12 +40,13 @@ const Modal = ({ setActive, selectedCurrency }: ModalProps) => {
         <div className="modal__input-field">
           <input
             onChange={(e) => onChangeInput(e)}
+            type="text"
             value={input}
             autoFocus={true}
             className="modal__input"
             placeholder="Enter the value..."
           />
-          <button className="add-button" onClick={onAddButton}>
+          <button className="button button__add" onClick={onAddButton} type="submit">
             Add
           </button>
         </div>

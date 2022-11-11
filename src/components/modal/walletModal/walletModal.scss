@@ -1,8 +1,6 @@
-  .wallet-list {
-    padding: 0;
-  }
-
-  .wallet-list__item {
+.wallet-list {
+  padding: 0;
+  &__item {
     display: flex;
     float: left;
     flex-direction: row;
@@ -11,5 +9,4 @@
     justify-content: space-between;
     margin-bottom: 1rem;
   }
-
-  
+}

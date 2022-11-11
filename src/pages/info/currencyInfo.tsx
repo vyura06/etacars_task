@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
 import { getCurrencyHistory } from "../../redux/slices/currencySlice";
-import { Loader } from "../loader/Loader";
-import Modal from "../modal/Modal";
-import { float } from "../../float/float";
+import { Loader } from "../../components/loader/Loader";
+import Modal from "../../components/modal/currencyModal/currencyModal";
+import { float } from "../../utils/float/float";
 import { Currency } from "../../interfaces/Currency";
-import { LineChart } from "../lineChart/lineChart";
+import { LineChart } from "../../components/lineChart/lineChart";
 
 
 export const Info = () => {
@@ -45,13 +45,15 @@ export const Info = () => {
       {status === "success" && history.length ? (
         <div className="currency-details column">
           <div className="row">
-            <div style={{backgroundColor: "#8D9EFF", color:"white"}} className="add-button" onClick={onClickPlusButton}>
-              +
-            </div>
-            <div
-              className="back-button"
+            <button
+              style={{backgroundColor: "#8D9EFF", color:"white"}} 
+              className="button button__add" 
+              onClick={onClickPlusButton}
+            >+</button>
+            <button
+              className="button button__back"
               onClick={onNavigateToCurrencyTable}
-            >{`Back`}</div>
+            >Back</button>
           </div>
           <div className="currency-details__info">
             <div className="currency-details__info-element">
@@ -70,7 +72,9 @@ export const Info = () => {
                 ? `${float(currency.changePercent24Hr)}%`
                 : "None"}
             </div>
-            <LineChart history={history} />
+            <div className="lineChart">
+              <LineChart history={history} />
+            </div>
           </div>
         </div>
       ) : null}
