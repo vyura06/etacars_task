@@ -4,7 +4,7 @@ import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
 import { getCurrencyHistory } from "../../redux/slices/currencySlice";
 import { Loader } from "../../components/loader/Loader";
 import Modal from "../../components/modal/currencyModal/currencyModal";
-import { float } from "../../utils/float/float";
+import { float } from "../../lib/float/float";
 import { Currency } from "../../interfaces/Currency";
 import { LineChart } from "../../components/lineChart/lineChart";
 

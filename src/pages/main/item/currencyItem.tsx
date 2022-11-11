@@ -1,5 +1,5 @@
 import React from "react";
-import { float } from "../../../utils/float/float";
+import { float } from "../../../lib/float/float";
 import { useNavigate } from "react-router-dom";
 import { Currency } from "../../../interfaces/Currency";
 import { useWindowWidth } from "../../../hooks/hooks";

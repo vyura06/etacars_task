@@ -1,6 +1,6 @@
 import React from "react";
 import { Wallet } from "../../../interfaces/Wallet";
-import { float } from "../../../utils/float/float";
+import { float } from "../../../lib/float/float";
 import { useAppDispatch } from "../../../hooks/hooks";
 import { deleteCurrencyFromWallet } from "../../../redux/slices/walletSlice";
 

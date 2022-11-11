@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { float } from "../../utils/float/float";
+import { float } from "../../lib/float/float";
 import { useAppSelector } from "../../hooks/hooks";
-import { calcCurrentWallet, calcInitialWallet } from "../../utils/calculation/calc";
+import { calcCurrentWallet, calcInitialWallet } from "../../lib/calculation/calc";
 import { WalletModal } from "../modal/walletModal/walletModal";
 
 export const Header = () => {
