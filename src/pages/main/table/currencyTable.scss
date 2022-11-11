@@ -21,6 +21,15 @@
   }
 }
 
+.column {
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 //880px
 @media (max-width: 55em) {
   .container {

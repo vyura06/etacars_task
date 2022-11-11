@@ -4,13 +4,13 @@ import { Table } from '../../pages/main/table/currencyTable';
 import { Info } from '../../pages/info/currencyInfo';
 
 import { useEffect } from "react";
-import { getCurrencies } from "../../redux/slices/currencySlice";
+import { getCurrencies , CreatePage} from "../../redux/slices/currencySlice";
 import { useAppDispatch } from "../../hooks/hooks";
 
 export const Content = (): JSX.Element => {
   const dispatch = useAppDispatch();
   useEffect(() => {
-    dispatch(getCurrencies());
+    dispatch(getCurrencies(CreatePage(1, 100)));
   }, [dispatch]);
 
   return (

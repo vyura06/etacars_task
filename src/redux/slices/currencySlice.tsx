@@ -3,7 +3,6 @@ import {createSlice, PayloadAction, createAsyncThunk} from "@reduxjs/toolkit";
 import {Currency} from "../../interfaces/Currency";
 import { History } from "../../interfaces/History";
 
-
 const api = "https://api.coincap.io/v2/assets";
 
 interface InitialState {
@@ -18,10 +17,17 @@ const initialState: InitialState = {
   status: "loading",
 };
 
+interface Page {
+  offset:number;
+  limit:number;
+}
+export const CreatePage =(numberPage:number, elementsPerPage:number) :Page => {
+  return {offset:(numberPage - 1)*elementsPerPage, limit:elementsPerPage};
+}
 export const getCurrencies = createAsyncThunk(
   "/currency/getCurrencies",
-  async () => {
-    const response = await axios.get(api);
+  async ({offset, limit}:Page) => {
+    const response = await axios.get(api + `?offset=${offset}&limit=${limit}`);
     return await response.data.data;
   }
 );
