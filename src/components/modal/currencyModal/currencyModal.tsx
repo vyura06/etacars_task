@@ -13,9 +13,6 @@ const Modal = ({ setActive, selectedCurrency }: ModalProps) => {
   const reg = /^([0-9]+)(\.)?([0-9]+)?$/;
   const [input, setInput] = useState<string>("");
   const [warningActive, setWarningActive] = useState<boolean>(false);
-  const onChangeInput = (e: ChangeEvent<HTMLInputElement>) => {
-    setInput(e.target.value);
-  };
 
   const onAddButton = () => {
     if (reg.test(input) && selectedCurrency && input!=='0') {
@@ -33,11 +30,16 @@ const Modal = ({ setActive, selectedCurrency }: ModalProps) => {
     }
   };
 
+  const onChangeInput = (e: ChangeEvent<HTMLInputElement>) => {
+    e.preventDefault();
+    setInput(e.target.value);
+  };
+
   return (
     <div className="modal" onClick={() => setActive(false)}>
       <div className="modal__content" onClick={(e) => e.stopPropagation()}>
         <p>Enter the value and click add</p>
-        <div className="modal__input-field">
+        <form onClick={() => alert("Added to wallet!")} className="modal__input-field">
           <input
             onChange={(e) => onChangeInput(e)}
             type="text"
@@ -49,7 +51,7 @@ const Modal = ({ setActive, selectedCurrency }: ModalProps) => {
           <button className="button button__add" onClick={onAddButton} type="submit">
             Add
           </button>
-        </div>
+        </form>
         {warningActive && (
           <div className="modal__warning-message">Invalid value</div>
         )}

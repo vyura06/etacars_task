@@ -28,7 +28,7 @@ export const WalletModal = ({
                 style={{ marginLeft: "1rem" }}
                 className="button button__delete"
                 type="submit"
-                onClick={() => dispatch(deleteCurrencyFromWallet(e.id))}
+                onClick={() => dispatch(deleteCurrencyFromWallet(e.id)) && alert("Removed from wallet")}
               >Delete</button>
             </li>
           ))}

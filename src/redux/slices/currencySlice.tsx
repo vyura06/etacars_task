@@ -1,7 +1,8 @@
 import axios from "axios";
 import {createSlice, PayloadAction, createAsyncThunk} from "@reduxjs/toolkit";
-import {Currency} from "../../interfaces/Currency";
+import { Currency } from "../../interfaces/Currency";
 import { History } from "../../interfaces/History";
+import { Page } from "../../interfaces/Page";
 
 const api = "https://api.coincap.io/v2/assets";
 
@@ -17,10 +18,6 @@ const initialState: InitialState = {
   status: "loading",
 };
 
-interface Page {
-  offset:number;
-  limit:number;
-}
 export const CreatePage =(numberPage:number, elementsPerPage:number) :Page => {
   return {offset:(numberPage - 1)*elementsPerPage, limit:elementsPerPage};
 }
